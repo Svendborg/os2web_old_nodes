@@ -143,9 +143,9 @@ function os2web_old_nodes_views_default_views() {
   $handler->display->display_options['filters']['changed']['value']['value'] = 'now -6 months';
   $handler->display->display_options['filters']['changed']['value']['type'] = 'offset';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'user/%user/old-nodes';
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['block_description'] = 'Brugers gamle noder';
   $translatables['os2web_users_old_nodes'] = array(
     t('Master'),
     t('Dine gamle sider'),
@@ -168,7 +168,8 @@ function os2web_old_nodes_views_default_views() {
     t('Opdateringsdato'),
     t('Rediger'),
     t('Alle'),
-    t('Page'),
+    t('Blok'),
+    t('Brugers gamle noder'),
   );
   $export['os2web_users_old_nodes'] = $view;
 
